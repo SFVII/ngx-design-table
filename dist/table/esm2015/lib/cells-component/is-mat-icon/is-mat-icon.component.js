@@ -1,30 +1,6 @@
+import { __decorate, __metadata } from "tslib";
 import { Component, Input } from '@angular/core';
-import * as i0 from "@angular/core";
-import * as i1 from "@angular/common";
-import * as i2 from "@angular/material/icon";
-function IsMatIconComponent_ng_container_0_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementContainerStart(0);
-    i0.ɵɵelementStart(1, "span");
-    i0.ɵɵtext(2);
-    i0.ɵɵelementEnd();
-    i0.ɵɵelementContainerEnd();
-} if (rf & 2) {
-    const ctx_r1 = i0.ɵɵnextContext();
-    i0.ɵɵadvance(2);
-    i0.ɵɵtextInterpolate(ctx_r1.display);
-} }
-function IsMatIconComponent_ng_container_1_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementContainerStart(0);
-    i0.ɵɵelementStart(1, "mat-icon");
-    i0.ɵɵtext(2);
-    i0.ɵɵelementEnd();
-    i0.ɵɵelementContainerEnd();
-} if (rf & 2) {
-    const ctx_r2 = i0.ɵɵnextContext();
-    i0.ɵɵadvance(2);
-    i0.ɵɵtextInterpolate(ctx_r2.display);
-} }
-export class IsMatIconComponent {
+let IsMatIconComponent = class IsMatIconComponent {
     constructor() {
         this.isIcon = false;
     }
@@ -39,24 +15,18 @@ export class IsMatIconComponent {
             this.display = this.input;
         }
     }
-}
-IsMatIconComponent.ɵfac = function IsMatIconComponent_Factory(t) { return new (t || IsMatIconComponent)(); };
-IsMatIconComponent.ɵcmp = i0.ɵɵdefineComponent({ type: IsMatIconComponent, selectors: [["app-is-mat-icon"]], inputs: { input: "input" }, decls: 2, vars: 2, consts: [[4, "ngIf"]], template: function IsMatIconComponent_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵtemplate(0, IsMatIconComponent_ng_container_0_Template, 3, 1, "ng-container", 0);
-        i0.ɵɵtemplate(1, IsMatIconComponent_ng_container_1_Template, 3, 1, "ng-container", 0);
-    } if (rf & 2) {
-        i0.ɵɵproperty("ngIf", !ctx.isIcon);
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngIf", ctx.isIcon);
-    } }, directives: [i1.NgIf, i2.MatIcon], styles: [""] });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(IsMatIconComponent, [{
-        type: Component,
-        args: [{
-                selector: 'app-is-mat-icon',
-                templateUrl: './is-mat-icon.component.html',
-                styleUrls: ['./is-mat-icon.component.scss']
-            }]
-    }], function () { return []; }, { input: [{
-            type: Input
-        }] }); })();
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaXMtbWF0LWljb24uY29tcG9uZW50LmpzIiwic291cmNlUm9vdCI6Im5nOi8vdGFibGUvIiwic291cmNlcyI6WyJsaWIvY2VsbHMtY29tcG9uZW50L2lzLW1hdC1pY29uL2lzLW1hdC1pY29uLmNvbXBvbmVudC50cyIsImxpYi9jZWxscy1jb21wb25lbnQvaXMtbWF0LWljb24vaXMtbWF0LWljb24uY29tcG9uZW50Lmh0bWwiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsT0FBTyxFQUFDLFNBQVMsRUFBRSxLQUFLLEVBQVMsTUFBTSxlQUFlLENBQUM7Ozs7O0lDQXZELDZCQUNJO0lBQUEsNEJBQU87SUFBQSxZQUFXO0lBQUEsaUJBQU87SUFDN0IsMEJBQWU7OztJQURKLGVBQVc7SUFBWCxvQ0FBVzs7O0lBRXRCLDZCQUNJO0lBQUEsZ0NBQVU7SUFBQSxZQUFXO0lBQUEsaUJBQVc7SUFDcEMsMEJBQWU7OztJQURELGVBQVc7SUFBWCxvQ0FBVzs7QURHekIsTUFBTSxPQUFPLGtCQUFrQjtJQUszQjtRQUZPLFdBQU0sR0FBYSxLQUFLLENBQUM7SUFHaEMsQ0FBQztJQUVELFFBQVE7UUFDSixJQUFJLElBQUksQ0FBQyxLQUFLLElBQUksSUFBSSxDQUFDLEtBQUssQ0FBQyxPQUFPLENBQUMsQ0FBQyxPQUFPLENBQUMsQ0FBQyxHQUFHLENBQUMsQ0FBQyxFQUFDO1lBQ2pELE9BQU8sQ0FBQyxHQUFHLENBQUMsVUFBVSxFQUFFLElBQUksQ0FBQyxLQUFLLENBQUMsQ0FBQTtZQUNuQyxJQUFJLENBQUMsTUFBTSxHQUFHLElBQUksQ0FBQztZQUNuQixJQUFJLENBQUMsT0FBTyxHQUFHLElBQUksQ0FBQyxLQUFLLENBQUMsS0FBSyxDQUFDLEdBQUcsQ0FBQyxDQUFDLENBQUMsQ0FBQyxDQUFDO1NBQzNDO2FBQU07WUFDSCxJQUFJLENBQUMsTUFBTSxHQUFHLEtBQUssQ0FBQztZQUNwQixJQUFJLENBQUMsT0FBTyxHQUFHLElBQUksQ0FBQyxLQUFLLENBQUM7U0FDN0I7SUFDTCxDQUFDOztvRkFqQlEsa0JBQWtCO3VEQUFsQixrQkFBa0I7UUNQL0IscUZBQ0k7UUFFSixxRkFDSTs7UUFKVSxrQ0FBZTtRQUdkLGVBQWM7UUFBZCxpQ0FBYzs7a0RESWhCLGtCQUFrQjtjQUw5QixTQUFTO2VBQUM7Z0JBQ1AsUUFBUSxFQUFFLGlCQUFpQjtnQkFDM0IsV0FBVyxFQUFFLDhCQUE4QjtnQkFDM0MsU0FBUyxFQUFFLENBQUMsOEJBQThCLENBQUM7YUFDOUM7O2tCQUVJLEtBQUsiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQge0NvbXBvbmVudCwgSW5wdXQsIE9uSW5pdH0gZnJvbSAnQGFuZ3VsYXIvY29yZSc7XG5cbkBDb21wb25lbnQoe1xuICAgIHNlbGVjdG9yOiAnYXBwLWlzLW1hdC1pY29uJyxcbiAgICB0ZW1wbGF0ZVVybDogJy4vaXMtbWF0LWljb24uY29tcG9uZW50Lmh0bWwnLFxuICAgIHN0eWxlVXJsczogWycuL2lzLW1hdC1pY29uLmNvbXBvbmVudC5zY3NzJ11cbn0pXG5leHBvcnQgY2xhc3MgSXNNYXRJY29uQ29tcG9uZW50IGltcGxlbWVudHMgT25Jbml0IHtcbiAgICBASW5wdXQoKSBpbnB1dDogc3RyaW5nO1xuICAgIHB1YmxpYyBkaXNwbGF5OiBzdHJpbmc7XG4gICAgcHVibGljIGlzSWNvbiA6IGJvb2xlYW4gPSBmYWxzZTtcblxuICAgIGNvbnN0cnVjdG9yKCkge1xuICAgIH1cblxuICAgIG5nT25Jbml0KCk6IHZvaWQge1xuICAgICAgICBpZiAodGhpcy5pbnB1dCAmJiB0aGlzLmlucHV0LmluZGV4T2YoKCdpY29uLicpKSA+IC0xKXtcbiAgICAgICAgICAgIGNvbnNvbGUubG9nKCdoZWhlaGVlaCcsIHRoaXMuaW5wdXQpXG4gICAgICAgICAgICB0aGlzLmlzSWNvbiA9IHRydWU7XG4gICAgICAgICAgICB0aGlzLmRpc3BsYXkgPSB0aGlzLmlucHV0LnNwbGl0KCcuJylbMV07XG4gICAgICAgIH0gZWxzZSB7XG4gICAgICAgICAgICB0aGlzLmlzSWNvbiA9IGZhbHNlO1xuICAgICAgICAgICAgdGhpcy5kaXNwbGF5ID0gdGhpcy5pbnB1dDtcbiAgICAgICAgfVxuICAgIH1cblxufVxuIiwiPG5nLWNvbnRhaW5lciAqbmdJZj1cIiFpc0ljb25cIj5cbiAgICA8c3BhbiA+e3tkaXNwbGF5fX08L3NwYW4+XG48L25nLWNvbnRhaW5lcj5cbjxuZy1jb250YWluZXIgICpuZ0lmPVwiaXNJY29uXCI+XG4gICAgPG1hdC1pY29uPnt7ZGlzcGxheX19PC9tYXQtaWNvbj5cbjwvbmctY29udGFpbmVyPiJdfQ==
+};
+__decorate([
+    Input(),
+    __metadata("design:type", String)
+], IsMatIconComponent.prototype, "input", void 0);
+IsMatIconComponent = __decorate([
+    Component({
+        selector: 'app-is-mat-icon',
+        template: "<ng-container *ngIf=\"!isIcon\">\n    <span >{{display}}</span>\n</ng-container>\n<ng-container  *ngIf=\"isIcon\">\n    <mat-icon>{{display}}</mat-icon>\n</ng-container>",
+        styles: [""]
+    }),
+    __metadata("design:paramtypes", [])
+], IsMatIconComponent);
+export { IsMatIconComponent };
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaXMtbWF0LWljb24uY29tcG9uZW50LmpzIiwic291cmNlUm9vdCI6Im5nOi8vdGFibGUvIiwic291cmNlcyI6WyJsaWIvY2VsbHMtY29tcG9uZW50L2lzLW1hdC1pY29uL2lzLW1hdC1pY29uLmNvbXBvbmVudC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQUEsT0FBTyxFQUFDLFNBQVMsRUFBRSxLQUFLLEVBQVMsTUFBTSxlQUFlLENBQUM7QUFPdkQsSUFBYSxrQkFBa0IsR0FBL0IsTUFBYSxrQkFBa0I7SUFLM0I7UUFGTyxXQUFNLEdBQWEsS0FBSyxDQUFDO0lBR2hDLENBQUM7SUFFRCxRQUFRO1FBQ0osSUFBSSxJQUFJLENBQUMsS0FBSyxJQUFJLElBQUksQ0FBQyxLQUFLLENBQUMsT0FBTyxDQUFDLENBQUMsT0FBTyxDQUFDLENBQUMsR0FBRyxDQUFDLENBQUMsRUFBQztZQUNqRCxPQUFPLENBQUMsR0FBRyxDQUFDLFVBQVUsRUFBRSxJQUFJLENBQUMsS0FBSyxDQUFDLENBQUE7WUFDbkMsSUFBSSxDQUFDLE1BQU0sR0FBRyxJQUFJLENBQUM7WUFDbkIsSUFBSSxDQUFDLE9BQU8sR0FBRyxJQUFJLENBQUMsS0FBSyxDQUFDLEtBQUssQ0FBQyxHQUFHLENBQUMsQ0FBQyxDQUFDLENBQUMsQ0FBQztTQUMzQzthQUFNO1lBQ0gsSUFBSSxDQUFDLE1BQU0sR0FBRyxLQUFLLENBQUM7WUFDcEIsSUFBSSxDQUFDLE9BQU8sR0FBRyxJQUFJLENBQUMsS0FBSyxDQUFDO1NBQzdCO0lBQ0wsQ0FBQztDQUVKLENBQUE7QUFsQlk7SUFBUixLQUFLLEVBQUU7O2lEQUFlO0FBRGQsa0JBQWtCO0lBTDlCLFNBQVMsQ0FBQztRQUNQLFFBQVEsRUFBRSxpQkFBaUI7UUFDM0IscUxBQTJDOztLQUU5QyxDQUFDOztHQUNXLGtCQUFrQixDQW1COUI7U0FuQlksa0JBQWtCIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHtDb21wb25lbnQsIElucHV0LCBPbkluaXR9IGZyb20gJ0Bhbmd1bGFyL2NvcmUnO1xuXG5AQ29tcG9uZW50KHtcbiAgICBzZWxlY3RvcjogJ2FwcC1pcy1tYXQtaWNvbicsXG4gICAgdGVtcGxhdGVVcmw6ICcuL2lzLW1hdC1pY29uLmNvbXBvbmVudC5odG1sJyxcbiAgICBzdHlsZVVybHM6IFsnLi9pcy1tYXQtaWNvbi5jb21wb25lbnQuc2NzcyddXG59KVxuZXhwb3J0IGNsYXNzIElzTWF0SWNvbkNvbXBvbmVudCBpbXBsZW1lbnRzIE9uSW5pdCB7XG4gICAgQElucHV0KCkgaW5wdXQ6IHN0cmluZztcbiAgICBwdWJsaWMgZGlzcGxheTogc3RyaW5nO1xuICAgIHB1YmxpYyBpc0ljb24gOiBib29sZWFuID0gZmFsc2U7XG5cbiAgICBjb25zdHJ1Y3RvcigpIHtcbiAgICB9XG5cbiAgICBuZ09uSW5pdCgpOiB2b2lkIHtcbiAgICAgICAgaWYgKHRoaXMuaW5wdXQgJiYgdGhpcy5pbnB1dC5pbmRleE9mKCgnaWNvbi4nKSkgPiAtMSl7XG4gICAgICAgICAgICBjb25zb2xlLmxvZygnaGVoZWhlZWgnLCB0aGlzLmlucHV0KVxuICAgICAgICAgICAgdGhpcy5pc0ljb24gPSB0cnVlO1xuICAgICAgICAgICAgdGhpcy5kaXNwbGF5ID0gdGhpcy5pbnB1dC5zcGxpdCgnLicpWzFdO1xuICAgICAgICB9IGVsc2Uge1xuICAgICAgICAgICAgdGhpcy5pc0ljb24gPSBmYWxzZTtcbiAgICAgICAgICAgIHRoaXMuZGlzcGxheSA9IHRoaXMuaW5wdXQ7XG4gICAgICAgIH1cbiAgICB9XG5cbn1cbiJdfQ==

@@ -1,5 +1,4 @@
 import { AfterViewInit, ElementRef, OnInit } from '@angular/core';
-import * as i0 from "@angular/core";
 export declare class NameAvatarComponent implements OnInit, AfterViewInit {
     src: string;
     fontSize: string;
@@ -16,6 +15,4 @@ export declare class NameAvatarComponent implements OnInit, AfterViewInit {
     ngOnInit(): void;
     ngAfterViewInit(): void;
     getRatio(): void;
-    static ɵfac: i0.ɵɵFactoryDef<NameAvatarComponent>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<NameAvatarComponent, "name-avatar", never, { "src": "src"; "fontSize": "fontSize"; }, {}, never>;
 }

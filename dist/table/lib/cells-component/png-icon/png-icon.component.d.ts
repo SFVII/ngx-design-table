@@ -1,5 +1,4 @@
 import { ElementRef, OnInit } from '@angular/core';
-import * as i0 from "@angular/core";
 export declare class PngIconComponent implements OnInit {
     src: string;
     fontSize: string;
@@ -10,6 +9,4 @@ export declare class PngIconComponent implements OnInit {
     private _size;
     constructor();
     ngOnInit(): void;
-    static ɵfac: i0.ɵɵFactoryDef<PngIconComponent>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<PngIconComponent, "png-icon", never, { "src": "src"; "fontSize": "fontSize"; "color": "color"; }, {}, never>;
 }

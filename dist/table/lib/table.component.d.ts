@@ -3,7 +3,6 @@ import { CellsComponentList } from "./setting/CellsComponentRegistry";
 import { MatSort } from "@angular/material/sort";
 import { MatPaginator } from "@angular/material/paginator";
 import { CoreMatTable, CoreMatTableInterface, FilterDateInterface, Page, PageRequest, Sort } from "./core-data-table";
-import * as i0 from "@angular/core";
 interface displayedColumnsInterface {
     key: string;
     value: string;
@@ -36,7 +35,5 @@ declare class TableComponent implements OnInit {
     buildLink(override: string[], element: any): string;
     Join(elem: any, override: string[], joinKey?: string): string;
     reset(): boolean;
-    static ɵfac: i0.ɵɵFactoryDef<TableComponent>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<TableComponent, "ngx-design-table", never, { "columnDefinitions": "columnDefinitions"; "displayDetail": "displayDetail"; "displayComponent": "displayComponent"; "data": "data"; }, {}, never>;
 }
 export { CoreMatTable, FilterDateInterface, CoreMatTableInterface, Page, PageRequest, Sort, displayedColumnsInterface, CellsComponentList, TableComponent };
