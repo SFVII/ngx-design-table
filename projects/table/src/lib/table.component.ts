@@ -116,6 +116,7 @@ class TableComponent implements OnInit {
 export {
   CoreMatTable,
   FilterDateInterface,
+  CoreMatTableInterface,
   Page,
   PageRequest,
   Sort,

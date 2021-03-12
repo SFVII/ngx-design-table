@@ -39,4 +39,4 @@ declare class TableComponent implements OnInit {
     static ɵfac: i0.ɵɵFactoryDef<TableComponent>;
     static ɵcmp: i0.ɵɵComponentDefWithMeta<TableComponent, "ngx-design-table", never, { "columnDefinitions": "columnDefinitions"; "displayDetail": "displayDetail"; "displayComponent": "displayComponent"; "data": "data"; }, {}, never>;
 }
-export { CoreMatTable, FilterDateInterface, Page, PageRequest, Sort, displayedColumnsInterface, CellsComponentList, TableComponent };
+export { CoreMatTable, FilterDateInterface, CoreMatTableInterface, Page, PageRequest, Sort, displayedColumnsInterface, CellsComponentList, TableComponent };
