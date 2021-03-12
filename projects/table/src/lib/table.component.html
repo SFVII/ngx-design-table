@@ -77,6 +77,17 @@
               </ng-container>
             </a>
           </ng-container>
+          <ng-container *ngSwitchCase="'it-category'">
+            <app-equipement-type [name]=" element[column.key]" [type]="element[column.override]"></app-equipement-type>
+          </ng-container>
+          <!-- icon it status -->
+          <ng-container *ngSwitchCase="'it-status'">
+            <app-equipement-status [type]="element[column.key]"></app-equipement-status>
+          </ng-container>
+          <!-- icon customer rank -->
+          <ng-container *ngSwitchCase="'customer-rank'">
+            <app-customer-rank [type]="element[column.key]"></app-customer-rank>
+          </ng-container>
           <!-- icon priority-->
           <ng-container *ngSwitchCase="'priority'">
             <icon-priority [icon]="element[column.key]"></icon-priority>
