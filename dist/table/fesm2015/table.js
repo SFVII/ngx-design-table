@@ -614,6 +614,9 @@ var CellsComponentList;
     CellsComponentList["Gender"] = "gender-avatar";
     CellsComponentList["Phone"] = "phone-display";
     CellsComponentList["YesNo"] = "yes-no-display";
+    CellsComponentList["CustomerRank"] = "customer-rank";
+    CellsComponentList["ItCategory"] = "it-category";
+    CellsComponentList["ItStatus"] = "it-status";
 })(CellsComponentList || (CellsComponentList = {}));
 
 class CoreMatTable extends DataSource {

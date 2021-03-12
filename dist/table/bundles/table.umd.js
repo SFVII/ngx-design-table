@@ -835,6 +835,9 @@
         CellsComponentList["Gender"] = "gender-avatar";
         CellsComponentList["Phone"] = "phone-display";
         CellsComponentList["YesNo"] = "yes-no-display";
+        CellsComponentList["CustomerRank"] = "customer-rank";
+        CellsComponentList["ItCategory"] = "it-category";
+        CellsComponentList["ItStatus"] = "it-status";
     })(exports.CellsComponentList || (exports.CellsComponentList = {}));
 
     var CoreMatTable = /** @class */ (function (_super) {

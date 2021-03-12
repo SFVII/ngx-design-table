@@ -15,5 +15,8 @@ export enum CellsComponentList {
   CountRow = "count-row",
   Gender = 'gender-avatar',
   Phone = 'phone-display',
-  YesNo = 'yes-no-display'
+  YesNo = 'yes-no-display',
+  CustomerRank = 'customer-rank',
+  ItCategory = 'it-category',
+  ItStatus = 'it-status'
 }
