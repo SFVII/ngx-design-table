@@ -50,6 +50,8 @@ class TableComponent implements OnInit {
 
   ngOnInit(): void {
     this.expandedElement = false;
+    this.data.paginator = this.paginatorCurrent;
+    this.data.sort = this.sortCurrent;
     this.buildHeaders().catch((err: any) => console.log('Error build table', err));
   }
 

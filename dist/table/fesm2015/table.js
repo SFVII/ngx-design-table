@@ -1180,6 +1180,8 @@ class TableComponent {
     }
     ngOnInit() {
         this.expandedElement = false;
+        this.data.paginator = this.paginatorCurrent;
+        this.data.sort = this.sortCurrent;
         this.buildHeaders().catch((err) => console.log('Error build table', err));
     }
     buildHeaders() {
