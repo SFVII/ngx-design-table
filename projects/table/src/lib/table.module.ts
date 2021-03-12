@@ -58,7 +58,16 @@ import {MatBadgeModule} from "@angular/material/badge";
     OriginComponent,
     PhoneDisplayComponent,
     PriorityComponent,
-    YesNoComponent
+    YesNoComponent,
+    PngIconModule,
+    MatPaginatorModule,
+    MatTableModule,
+    MatSortModule,
+    MatTooltipModule,
+    CommonModule,
+    MatIconModule,
+    RouterModule,
+    MatBadgeModule
   ]
 })
 export class TableModule {
