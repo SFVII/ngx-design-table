@@ -6,6 +6,7 @@
  ***********************************************************/
 export declare enum CellsComponentList {
     ButtonLink = "button-link",
+    ButtonClick = "button-click",
     Priority = "priority",
     Origin = "origin",
     NameAvatar = "name-avatar",

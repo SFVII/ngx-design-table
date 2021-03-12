@@ -1,4 +1,4 @@
-import { OnInit, OnChanges, SimpleChanges } from '@angular/core';
+import { EventEmitter, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { CellsComponentList } from "./setting/CellsComponentRegistry";
 import { MatSort } from "@angular/material/sort";
 import { MatPaginator } from "@angular/material/paginator";
@@ -22,6 +22,7 @@ declare class TableComponent implements OnInit, OnChanges {
     displayDetail: boolean;
     displayComponent: string;
     data: CoreMatTableInterface;
+    callFunction: EventEmitter<any>;
     columnsToDisplay: string[];
     filter: Array<string>;
     displayedColumns: any;

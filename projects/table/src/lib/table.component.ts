@@ -1,4 +1,14 @@
-import {Component, Input, OnInit, ViewChild, ViewEncapsulation, OnChanges, SimpleChanges} from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  Input,
+  OnChanges,
+  OnInit,
+  Output,
+  SimpleChanges,
+  ViewChild,
+  ViewEncapsulation
+} from '@angular/core';
 import {CellsComponentList} from "./setting/CellsComponentRegistry";
 import {MatSort} from "@angular/material/sort";
 import {MatPaginator} from "@angular/material/paginator";
@@ -37,6 +47,7 @@ class TableComponent implements OnInit, OnChanges {
   @Input() displayDetail: boolean = false;
   @Input() displayComponent: string;
   @Input() data: CoreMatTableInterface;
+  @Output() callFunction: EventEmitter<any> = new EventEmitter<any>();
   public columnsToDisplay: string[];
   public filter: Array<string> = [];
   public displayedColumns: any;

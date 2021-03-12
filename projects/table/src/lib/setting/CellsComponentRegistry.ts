@@ -6,13 +6,14 @@
  ***********************************************************/
 
 export enum CellsComponentList {
-    ButtonLink = "button-link",
-    Priority = "priority",
-    Origin = "origin",
-    NameAvatar = "name-avatar",
-    DateFormat = "date-format",
-    CountRow = "count-row",
-    Gender = 'gender-avatar',
-    Phone  = 'phone-display',
-    YesNo  = 'yes-no-display'
+  ButtonLink = "button-link",
+  ButtonClick = "button-click",
+  Priority = "priority",
+  Origin = "origin",
+  NameAvatar = "name-avatar",
+  DateFormat = "date-format",
+  CountRow = "count-row",
+  Gender = 'gender-avatar',
+  Phone = 'phone-display',
+  YesNo = 'yes-no-display'
 }
