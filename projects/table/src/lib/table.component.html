@@ -93,11 +93,18 @@
 
           <!-- icon gender avatar-->
           <ng-container *ngSwitchCase="'yes-no-display'">
-            <app-yes-nox [valid]="element[column.key]"></app-yes-nox>
+            <app-yes-nox *ngIf="column.config && (column.config.displayNo !== undefined && column.config.displayYes !== undefined)"
+                         [valid]="element[column.key]" [size]="column.config?.sizeIcon"
+                         [displayNo]="column.config.displayYes" [displayYes]="column.config.displayNo"
+            >
+            </app-yes-nox>
+            <app-yes-nox *ngIf="(!column.config || (column.config && !(column.config.displayNo || column.config.displayYes)))"
+                         [valid]="element[column.key]" [size]="column.config?.sizeIcon" >
+            </app-yes-nox>
           </ng-container>
           <!-- icon origin-->
           <ng-container *ngSwitchCase="'origin'">
-            <icon-origin [icon]="element[column.key]"></icon-origin>
+            <icon-origin [icon]="element[column.key]" ></icon-origin>
           </ng-container>
           <!-- icon name avatar-->
           <ng-container *ngSwitchCase="'name-avatar'">
