@@ -15,6 +15,13 @@ import {MatPaginator} from "@angular/material/paginator";
 import {CoreMatTable, CoreMatTableInterface, FilterDateInterface, Page, PageRequest, Sort} from "./core-data-table";
 import {animate, state, style, transition, trigger} from "@angular/animations";
 
+
+interface displayColumnsConfig {
+  sizeIcon?: number;
+  displayYes?: boolean;
+  displayNo?: boolean;
+}
+
 interface displayedColumnsInterface {
   key: string, // object key
   value: string, // display column values
@@ -25,7 +32,8 @@ interface displayedColumnsInterface {
   override?: string | string[], // for building url or avatar name
   display?: string, // force displaying other stuff than element[focus]
   align?: string, // cell content align 'left center right'
-  sort?: boolean // 'sortable column'
+  sort?: boolean, // 'sortable column'
+  config?: displayColumnsConfig
 }
 
 @Component({

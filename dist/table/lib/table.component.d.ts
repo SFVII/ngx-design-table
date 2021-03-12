@@ -3,6 +3,11 @@ import { CellsComponentList } from "./setting/CellsComponentRegistry";
 import { MatSort } from "@angular/material/sort";
 import { MatPaginator } from "@angular/material/paginator";
 import { CoreMatTable, CoreMatTableInterface, FilterDateInterface, Page, PageRequest, Sort } from "./core-data-table";
+interface displayColumnsConfig {
+    sizeIcon?: number;
+    displayYes?: boolean;
+    displayNo?: boolean;
+}
 interface displayedColumnsInterface {
     key: string;
     value: string;
@@ -14,6 +19,7 @@ interface displayedColumnsInterface {
     display?: string;
     align?: string;
     sort?: boolean;
+    config?: displayColumnsConfig;
 }
 declare class TableComponent implements OnInit, OnChanges {
     paginatorCurrent: MatPaginator;
