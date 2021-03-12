@@ -1,0 +1,126 @@
+<div class="table-wrapper">
+  <div class="row" style="height: 84px;background: transparent!important;">
+    <div class=" elevation-z1">
+      <div class="col-lg-12 search-container">
+        <input class="search-box" type="text" placeholder="Recherche" [maxLength]="100"
+               (input)="(($event.target.value.length > 1 || $event.target.value.length === 0)
+                        && $event.target.value.length < 200
+                                       ? data.filter($event) : null)"
+               #filterOngoing>
+        <a class="close-search" *ngIf="filterOngoing.value"
+           [matTooltip]="'Annuler la recherche'"
+           (click)="reset() && filterOngoing.value = ''">
+          <img [src]="'/assets/icons/search_off-24px.svg'">
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- Table -->
+  <table mat-table #table="matSort"
+         [dataSource]="data " multiTemplateDataRows matSort
+         class="mat-elevation-z8" *ngIf="displayedColumns && columnsToDisplay"
+         (matSortChange)="data.sortIt($event)">
+    <ng-container matColumnDef="{{column.key}}" *ngFor="let column of displayedColumns">
+      <ng-container *ngIf="column.sort">
+        <th mat-header-cell *matHeaderCellDef
+            [class]="generateClass([column.class, column.align ? 'text-align-'+column.align : 'text-align-left'])"
+            mat-sort-header>
+          <app-is-mat-icon [input]="column.value"></app-is-mat-icon>
+        </th>
+      </ng-container>
+      <ng-container *ngIf="!column.sort">
+        <!-- Ajouter fonction generate Class -->
+        <th mat-header-cell *matHeaderCellDef
+            [class]="generateClass([column.class, column.align ? 'text-align-'+column.align : 'text-align-left'])">
+          <app-is-mat-icon [input]="column.value"></app-is-mat-icon>
+        </th>
+      </ng-container>
+      <td mat-cell *matCellDef="let element"
+          [class]="generateClass([column.class, column.align ? 'text-align-'+column.align : ''])">
+        <ng-container [ngSwitch]="column.module">
+          <!-- Button link -->
+          <ng-container *ngSwitchCase="'button-link'">
+            <a *ngIf="element.new" matTooltip="Ouvrir"
+               class="mat-button nowboard-btn btn-xs"
+               routerLink="{{column.override ? buildLink(column.override, element) : element[column.key]}}"
+               matBadge="*" matBadgePosition="before"
+               matBadgeColor="accent">
+              <ng-container *ngIf="column.display">
+                <app-is-mat-icon style="padding-top:10px" [input]="column.display"></app-is-mat-icon>
+              </ng-container>
+              <ng-container *ngIf="!column.display">
+                {{element[column.key]}}
+              </ng-container>
+            </a>
+            <a *ngIf="!element.new"
+               matTooltip="Ouvrir"
+               class="mat-button nowboard-btn btn-xs"
+               routerLink="{{column.override ? buildLink(column.override, element) : element[column.key]}}">
+              <ng-container *ngIf="column.display">
+                <app-is-mat-icon style="padding-top:10px" [input]="column.display"></app-is-mat-icon>
+              </ng-container>
+              <ng-container *ngIf="!column.display">
+                {{element[column.key]}}
+              </ng-container>
+            </a>
+          </ng-container>
+          <!-- icon priority-->
+          <ng-container *ngSwitchCase="'priority'">
+            <icon-priority [icon]="element[column.key]"></icon-priority>
+          </ng-container>
+          <!-- icon origin-->
+          <ng-container *ngSwitchCase="'origin'">
+            <icon-origin [icon]="element[column.key]"></icon-origin>
+          </ng-container>
+          <!-- icon name avatar-->
+          <ng-container *ngSwitchCase="'name-avatar'">
+            <name-avatar matTooltip="{{Join(element, column.override)}}"
+                         [src]="element[column.key]"
+                         [matTooltipClass]="'my-tooltip'">
+            </name-avatar>
+          </ng-container>
+          <!-- date format -->
+          <ng-container *ngSwitchCase="'date-format'">
+            <date-format style="padding-right: 10px" [date]="element[column.key]"></date-format>
+          </ng-container>
+          <!-- count rows -->
+          <ng-container *ngSwitchCase="'count-row'">
+                       <span style="padding-left: 14px">
+                           {{(element[column.key] && element[column.key].length ? element[column.key].length : '-')}}
+                       </span>
+          </ng-container>
+          <ng-container *ngSwitchDefault>
+            {{element[column.key]}}
+          </ng-container>
+        </ng-container>
+
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="expandedDetailX" *ngIf="displayDetail">
+      <td mat-cell *matCellDef="let element" [attr.colspan]="columnsToDisplay.length"
+          [@detailExpand]="element == expandedElement ? 'expanded' : 'collapsed'"
+          style="border-bottom:transparent!important;height: 0">
+        <div class="element-detail">
+          {{element | json}}
+        </div>
+      </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+    <ng-container *ngIf="displayDetail">
+      <tr mat-row *matRowDef="let element; columns: columnsToDisplay;"
+          class="element-row"
+          [class.expanded]="expandedElement == element"
+          (click)="expandedElement === element? expandedElement = null : expandedElement = element">
+      </tr>
+      <tr mat-row *matRowDef="let row; columns: ['expandedDetailX']" class="detail-row"></tr>
+    </ng-container>
+    <ng-container *ngIf="!displayDetail">
+      <tr mat-row *matRowDef="let element; columns: columnsToDisplay;"
+          class="element-row">
+      </tr>
+    </ng-container>
+  </table>
+  <mat-paginator #MatPaginatorCurrent *ngIf="data" [length]="data.totalElements"
+                 [pageSize]="data.size" [pageIndex]="data.number" [hidePageSize]="true"
+                 (page)="data.fetch($event.pageIndex)" showFirstLastButtons></mat-paginator>
+</div>
