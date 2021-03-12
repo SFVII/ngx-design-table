@@ -78,7 +78,7 @@
             </a>
           </ng-container>
           <ng-container *ngSwitchCase="'it-category'">
-            <app-equipement-type [name]=" element[column.key]" [type]="element[column.override]"></app-equipement-type>
+            <app-equipement-type [name]="element[column.key]" [type]="element[column.override]"></app-equipement-type>
           </ng-container>
           <!-- icon it status -->
           <ng-container *ngSwitchCase="'it-status'">
