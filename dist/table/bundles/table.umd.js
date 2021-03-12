@@ -1187,7 +1187,16 @@
                     OriginComponent,
                     PhoneDisplayComponent,
                     PriorityComponent,
-                    YesNoComponent
+                    YesNoComponent,
+                    PngIconModule,
+                    paginator.MatPaginatorModule,
+                    table.MatTableModule,
+                    sort.MatSortModule,
+                    tooltip.MatTooltipModule,
+                    common.CommonModule,
+                    icon.MatIconModule,
+                    router.RouterModule,
+                    badge.MatBadgeModule
                 ]
             })
         ], TableModule);

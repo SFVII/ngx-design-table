@@ -886,7 +886,16 @@ TableModule = __decorate([
             OriginComponent,
             PhoneDisplayComponent,
             PriorityComponent,
-            YesNoComponent
+            YesNoComponent,
+            PngIconModule,
+            MatPaginatorModule,
+            MatTableModule,
+            MatSortModule,
+            MatTooltipModule,
+            CommonModule,
+            MatIconModule,
+            RouterModule,
+            MatBadgeModule
         ]
     })
 ], TableModule);
