@@ -11,5 +11,8 @@ export enum CellsComponentList {
     Origin = "origin",
     NameAvatar = "name-avatar",
     DateFormat = "date-format",
-    CountRow = "count-row"
+    CountRow = "count-row",
+    Gender = 'gender-avatar',
+    Phone  = 'phone-display',
+    YesNo  = 'yes-no-display'
 }

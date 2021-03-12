@@ -68,6 +68,20 @@
           <ng-container *ngSwitchCase="'priority'">
             <icon-priority [icon]="element[column.key]"></icon-priority>
           </ng-container>
+          <!-- icon gender avatar-->
+          <ng-container *ngSwitchCase="'gender-avatar'">
+            <app-gender [type]="element[column.key]"></app-gender>
+          </ng-container>
+
+          <!-- icon gender avatar-->
+          <ng-container *ngSwitchCase="'phone-display'">
+            <app-phone-display [number]="element[column.key]"></app-phone-display>
+          </ng-container>
+
+          <!-- icon gender avatar-->
+          <ng-container *ngSwitchCase="'phone-display'">
+            <app-yes-nox [valid]="element[column.key]"></app-yes-nox>
+          </ng-container>
           <!-- icon origin-->
           <ng-container *ngSwitchCase="'origin'">
             <icon-origin [icon]="element[column.key]"></icon-origin>
