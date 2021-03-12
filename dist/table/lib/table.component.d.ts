@@ -1,4 +1,4 @@
-import { OnInit } from '@angular/core';
+import { OnInit, OnChanges, SimpleChanges } from '@angular/core';
 import { CellsComponentList } from "./setting/CellsComponentRegistry";
 import { MatSort } from "@angular/material/sort";
 import { MatPaginator } from "@angular/material/paginator";
@@ -15,7 +15,7 @@ interface displayedColumnsInterface {
     align?: string;
     sort?: boolean;
 }
-declare class TableComponent implements OnInit {
+declare class TableComponent implements OnInit, OnChanges {
     paginatorCurrent: MatPaginator;
     sortCurrent: MatSort;
     columnDefinitions: [displayedColumnsInterface];
@@ -35,5 +35,6 @@ declare class TableComponent implements OnInit {
     buildLink(override: string[], element: any): string;
     Join(elem: any, override: string[], joinKey?: string): string;
     reset(): boolean;
+    ngOnChanges(changes: SimpleChanges): void;
 }
 export { CoreMatTable, FilterDateInterface, CoreMatTableInterface, Page, PageRequest, Sort, displayedColumnsInterface, CellsComponentList, TableComponent };

@@ -1009,10 +1009,12 @@
             this.index = 0;
         }
         TableComponent.prototype.ngOnInit = function () {
-            this.expandedElement = false;
-            this.data.paginator = this.paginatorCurrent;
-            this.data.sort = this.sortCurrent;
-            this.buildHeaders().catch(function (err) { return console.log('Error build table', err); });
+            if (this.data) {
+                this.expandedElement = false;
+                this.data.paginator = this.paginatorCurrent;
+                this.data.sort = this.sortCurrent;
+                this.buildHeaders().catch(function (err) { return console.log('Error build table', err); });
+            }
         };
         TableComponent.prototype.buildHeaders = function () {
             return __awaiter(this, void 0, void 0, function () {
@@ -1106,6 +1108,9 @@
                 }
             });
             return true;
+        };
+        TableComponent.prototype.ngOnChanges = function (changes) {
+            this.ngOnInit();
         };
         __decorate([
             core.ViewChild('MatPaginatorCurrent', { static: true }),

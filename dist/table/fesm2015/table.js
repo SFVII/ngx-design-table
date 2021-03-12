@@ -747,10 +747,12 @@ let TableComponent = class TableComponent {
         this.index = 0;
     }
     ngOnInit() {
-        this.expandedElement = false;
-        this.data.paginator = this.paginatorCurrent;
-        this.data.sort = this.sortCurrent;
-        this.buildHeaders().catch((err) => console.log('Error build table', err));
+        if (this.data) {
+            this.expandedElement = false;
+            this.data.paginator = this.paginatorCurrent;
+            this.data.sort = this.sortCurrent;
+            this.buildHeaders().catch((err) => console.log('Error build table', err));
+        }
     }
     buildHeaders() {
         return __awaiter(this, void 0, void 0, function* () {
@@ -807,6 +809,9 @@ let TableComponent = class TableComponent {
             }
         });
         return true;
+    }
+    ngOnChanges(changes) {
+        this.ngOnInit();
     }
 };
 __decorate([

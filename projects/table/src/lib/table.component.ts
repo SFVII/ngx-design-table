@@ -1,8 +1,7 @@
-import {Component, Input, OnInit, ViewChild, ViewEncapsulation} from '@angular/core';
+import {Component, Input, OnInit, ViewChild, ViewEncapsulation, OnChanges, SimpleChanges} from '@angular/core';
 import {CellsComponentList} from "./setting/CellsComponentRegistry";
 import {MatSort} from "@angular/material/sort";
 import {MatPaginator} from "@angular/material/paginator";
-
 import {CoreMatTable, CoreMatTableInterface, FilterDateInterface, Page, PageRequest, Sort} from "./core-data-table";
 import {animate, state, style, transition, trigger} from "@angular/animations";
 
@@ -30,7 +29,7 @@ interface displayedColumnsInterface {
   ])],
   encapsulation: ViewEncapsulation.None
 })
-class TableComponent implements OnInit {
+class TableComponent implements OnInit, OnChanges {
   @ViewChild('MatPaginatorCurrent', {static: true}) paginatorCurrent: MatPaginator;
   @ViewChild('table', {static: true}) sortCurrent: MatSort;
 
@@ -49,10 +48,12 @@ class TableComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.expandedElement = false;
-    this.data.paginator = this.paginatorCurrent;
-    this.data.sort = this.sortCurrent;
-    this.buildHeaders().catch((err: any) => console.log('Error build table', err));
+    if (this.data) {
+      this.expandedElement = false;
+      this.data.paginator = this.paginatorCurrent;
+      this.data.sort = this.sortCurrent;
+      this.buildHeaders().catch((err: any) => console.log('Error build table', err));
+    }
   }
 
   async buildHeaders() {
@@ -111,6 +112,10 @@ class TableComponent implements OnInit {
       }
     });
     return true;
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
+    this.ngOnInit();
   }
 
 }

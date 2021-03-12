@@ -45,7 +45,8 @@ import {MatBadgeModule} from "@angular/material/badge";
     CommonModule,
     MatIconModule,
     RouterModule,
-    MatBadgeModule],
+    MatBadgeModule
+  ],
   exports: [
     TableComponent,
     CustomerRankComponent,
