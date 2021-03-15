@@ -42,6 +42,7 @@ declare class TableComponent implements OnInit, OnChanges {
     buildLink(override: string[], element: any): string;
     Join(elem: any, override: string[], joinKey?: string): string;
     reset(): boolean;
+    expandShow(template: string): void;
     ngOnChanges(changes: SimpleChanges): void;
 }
 export { CoreMatTable, FilterDateInterface, CoreMatTableInterface, Page, PageRequest, Sort, displayedColumnsInterface, CellsComponentList, TableComponent };

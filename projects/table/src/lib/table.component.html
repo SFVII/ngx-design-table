@@ -146,7 +146,7 @@
           [@detailExpand]="element == expandedElement ? 'expanded' : 'collapsed'"
           style="border-bottom:transparent!important;height: 0">
         <div class="element-detail">
-          {{element | json}}
+          {{element.expanded}}
         </div>
       </td>
     </ng-container>
@@ -157,7 +157,9 @@
           [class.expanded]="expandedElement == element"
           (click)="expandedElement === element? expandedElement = null : expandedElement = element">
       </tr>
-      <tr mat-row *matRowDef="let row; columns: ['expandedDetailX']" class="detail-row"></tr>
+      <tr mat-row *matRowDef="let row; columns: ['expandedDetailX']" class="detail-row">
+        <div #expand></div>
+      </tr>
     </ng-container>
     <ng-container *ngIf="!displayDetail">
       <tr mat-row *matRowDef="let element; columns: columnsToDisplay;"

@@ -51,6 +51,7 @@ class TableComponent implements OnInit, OnChanges {
   @ViewChild('MatPaginatorCurrent', {static: true}) paginatorCurrent: MatPaginator;
   @ViewChild('table', {static: true}) sortCurrent: MatSort;
 
+
   @Input() columnDefinitions: [displayedColumnsInterface];
   @Input() displayDetail: boolean = false;
   @Input() displayComponent: string;
@@ -131,6 +132,10 @@ class TableComponent implements OnInit, OnChanges {
       }
     });
     return true;
+  }
+
+  expandShow(template: string) {
+
   }
 
   ngOnChanges(changes: SimpleChanges) {
