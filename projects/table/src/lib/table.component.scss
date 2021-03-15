@@ -5,9 +5,7 @@
   .mat-cell {
     padding-left: 10px;
   }
-  a.mat-button {
-    padding-top: 10px;
-  }
+
   png-icon {
     padding-left: 17px;
   }
@@ -61,6 +59,9 @@
     }
   }
   @media screen and (max-width: 1440px) {
+    a.mat-button {
+      padding-top: 10px;
+    }
     .mat-cell {
       padding-top: 15px;
       padding-bottom: 10px;
