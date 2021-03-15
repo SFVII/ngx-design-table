@@ -4,7 +4,12 @@
 ### Install
 ``` npm install --save sfvii/ngx-design-table ```
 
-#How To Use 
+
+### Todo 
+
+    Complete  this documentation, adding sample assets for icon generation and theming  
+
+### How To Use 
 
 ```
   import {
