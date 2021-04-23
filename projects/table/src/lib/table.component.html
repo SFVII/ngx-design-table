@@ -3,8 +3,8 @@
     <div class=" elevation-z1">
       <div class="col-lg-12 search-container">
         <input class="search-box" type="text" placeholder="Recherche" [maxLength]="100"
-               (input)="(($event.target.value.length > 1 || $event.target.value.length === 0)
-                        && $event.target.value.length < 200
+               (input)="((($event.target.value.length > 1 || $event.target.value.length === 0)
+                        && $event.target.value.length < 200)
                                        ? data.filter($event) : null)"
                #filterOngoing>
         <a class="close-search" *ngIf="filterOngoing.value"
@@ -55,6 +55,7 @@
           <ng-container *ngSwitchCase="'button-link'">
             <a *ngIf="element.new" matTooltip="Ouvrir"
                class="mat-button nowboard-btn btn-xs"
+               (click)="element.new = false"
                routerLink="{{column.override ? buildLink(column.override, element) : element[column.key]}}"
                matBadge="*" matBadgePosition="before"
                matBadgeColor="accent">

@@ -120,8 +120,8 @@ export class CoreMatTable extends DataSource<Element> {
             for (let e of data) {
                 e.pond = 0;
                 const dataRaw: string = JSON.stringify(e).toLowerCase()
-                    .replace(/[^a-zA-Z ]/g, " ");
-                const stack: string[] = filter.toLowerCase().replace(/[^a-zA-Z ]/g, " ")
+                    .replace(/[^a-zA-Z0-9 ]/g, " ");
+                const stack: string[] = filter.toLowerCase().replace(/[^a-zA-Z0-9 ]/g, " ")
                     .split(' ');
                 let combination: number = 0;
                 for (let k of stack) {
